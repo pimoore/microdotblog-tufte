@@ -42,7 +42,7 @@ Blockquote is a shortcode version of the standard Markdown blockquote option, ex
 	* **Note:** due to how Hugo handles external URLs, the link must be entered without the http(s): portion, instead only using //site-name/link/ (see example below)
 * post: optional to add trailing attribution info after the cite, such as page number references
 
-**Epigraph uses the same parameters** but these are used to highlight special passages or quotes either within or at the beginning of an article, or even a quote style post.  They are formatted in slightly smaller and italic text as opposed to blockquotes which are only indented.  Think of the epigraph as the Tufte equivalent of pullquotes.
+**Epigraph uses the same parameters** but this is used to highlight special passages or quotes either within or at the beginning of an article, or even a quote style post.  They are formatted in slightly smaller and italic text as opposed to blockquotes which are only indented.  Think of the epigraph as the Tufte equivalent of pullquotes.
 
 Code example:
 ```
