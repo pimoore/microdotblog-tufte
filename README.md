@@ -177,7 +177,7 @@ On smaller mobile screens the sidenotes, marginnotes and margin figures will be 
 
 * Dave Liepmann - [Tufte-CSS project](https://github.com/edwardtufte/tufte-css/)<br />
 * SlashForMotion - [Hugo-Tufte theme](https://github.com/slashformotion/hugo-tufte)<br />
-* Leon Paternoster (@leonp on Micro.blog) for his numerous excellent posts on font spacing and legibility
+* Leon Paternoster (@leonp on Micro.blog) for his numerous excellent posts on font spacing, typography and legibility
 * Jason Cardwell (@moondeer on Micro.blog) for his Ulysses tip for shortcode handling
 * Manton Reece (@manton on Micro.blog) for creating the Micro.blog platform
 
