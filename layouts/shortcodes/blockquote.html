@@ -1,0 +1,12 @@
+<blockquote>
+  <p>{{ .Inner | markdownify }}</p>
+{{ if .IsNamedParams }}
+			<footer>
+				{{ with .Get "pre" }}{{ . }}{{ end }}
+{{ with .Get "link" | safeURL | markdownify }}<a href={{ . }} target="_blank" rel="noopener">{{ end }}
+				{{ with .Get "cite" }}<cite>{{ . }}</cite>{{ end }}
+				{{if .Get "link"}}</a>{{ end }}
+				{{ with .Get "post" }}{{ . }}{{ end }}
+			</footer>
+		{{ end }}
+</blockquote>

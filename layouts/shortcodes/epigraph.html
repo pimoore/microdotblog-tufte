@@ -1,0 +1,15 @@
+<div class="epigraph">
+	<blockquote>
+		{{ $t := .Get "type" }}
+		{{ if eq $t "compact"  }}{{ .Inner | markdownify }}{{ else }}<p>{{ .Inner | markdownify }}</p>{{ end }}
+		{{ if .IsNamedParams }}
+			<footer>
+				{{ with .Get "pre" }}{{ . }}{{ end }}
+{{ with .Get "link" | safeURL | markdownify }}<a href={{ . }} target="_blank" rel="noopener">{{ end }}
+				{{ with .Get "cite" }}<cite>{{ . }}</cite>{{ end }}
+				{{ if .Get "link"}}</a>{{ end }}
+				{{ with .Get "post" }}{{ . }}{{ end }}
+			</footer>
+		{{ end }}
+	</blockquote>
+</div>

@@ -1,0 +1,37 @@
+{{ partial "head.html" . }}
+
+<body>
+<div id="container" class="h-feed">
+	{{ partial "header.html" . }}
+	<section id="main" class="outer">
+
+		{{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+		{{ if gt (len $list) 0 }}
+			<div class="archive_categories" style="border-bottom: 1px solid lightgray; padding-bottom: 15px; margin-bottom: 30px; padding-top: 15px;">
+				{{ range $list }}
+					<p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+				{{ end }}
+			</div>
+		{{ end }}
+	
+		{{ $list := (where .Site.Pages "Type" "post") }}
+		{{ range $list }}
+
+			<p class="h-entry" style="padding-bottom: 5px;">
+			<a href="{{ .Permalink }}" class="u-url"><span class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "2006-01-02" }}</span></a>
+			{{ if .Title }}
+				<span class="p-name"><b>{{ .Title }}</b></span> 
+			{{ else }}
+				<span class="truncated">{{ .Summary | truncate 100 }}</span>
+			{{ end }}
+		</p>
+		{{ end }}
+	</section>
+	{{ partial "footer.html" . }}
+</div>
+{{ partial "custom_footer.html" . }}
+{{ range .Site.Params.plugins_js }}
+	<script src="{{ . }}"></script>
+{{ end }}
+</body>
+</html>

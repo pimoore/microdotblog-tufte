@@ -1,0 +1,17 @@
+{{ partial "head.html" . }}
+<body>
+	<div class="content list h-feed">
+		{{ partial "header.html" . }}
+		{{ $paginator := .Paginate (where .Pages "Type" "post") }}
+		{{ range $paginator.Pages }}
+			{{ partial "li.html" . }}
+		{{ end }}
+		{{ partial "pagination.html" . }}
+		{{ partial "footer.html" . }}
+	</div>
+	{{ partial "custom_footer.html" . }}
+	{{ range .Site.Params.plugins_js }}
+		<script src="{{ . }}"></script>
+	{{ end }}
+</body>
+</html>

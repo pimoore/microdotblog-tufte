@@ -1,0 +1,108 @@
+{
+	"title": "[TITLE]",
+	"author": {
+	"name": "[FULL_NAME]",
+	"avatar": "https://micro.blog/[USERNAME]/avatar.jpg",
+	"username": "[USERNAME]"
+	},
+	"baseURL": "[SCHEME]://[HOSTNAME]/",
+	"mediaTypes": {
+		"application/json": {
+			"suffixes": [ "json" ]
+		}
+	},
+	"outputFormats": {
+		"RSS": {
+			"baseName": "feed"
+		},
+		"JSON": {
+			"baseName": "feed"
+		},
+		"RSD": {
+			"mediaType": "application/xml",
+			"baseName": "rsd",
+			"isPlainText": true,
+			"notAlternative": true
+		},
+		"ArchiveHTML": {
+			"mediaType": "text/html",
+			"path": "archive",
+			"baseName": "index",
+			"isPlainText": false,
+			"notAlternative": true
+		},
+		"ArchiveJSON": {
+			"mediaType": "application/json",
+			"path": "archive",
+			"baseName": "index",
+			"isPlainText": true,
+			"notAlternative": true
+		},
+		"PhotosHTML": {
+			"mediaType": "text/html",
+			"path": "photos",
+			"baseName": "index",
+			"isPlainText": false,
+			"notAlternative": true
+		},
+		"PhotosJSON": {
+			"mediaType": "application/json",
+			"path": "photos",
+			"baseName": "index",
+			"isPlainText": true,
+			"notAlternative": true
+		},
+		"PodcastXML": {
+			"mediaType": "application/rss+xml",
+			"baseName": "podcast",
+			"isPlainText": true,
+			"notAlternative": true
+		},
+		"PodcastJSON": {
+			"mediaType": "application/json",
+			"baseName": "podcast",
+			"isPlainText": true,
+			"notAlternative": true
+		}
+	},
+	"outputs": {
+		"home": [ "HTML", "RSS", "JSON", "RSD", "ArchiveHTML", "ArchiveJSON", "PhotosJSON", "PodcastXML", "PodcastJSON" ],
+		"page": [ "HTML" ],
+		"section": [ "HTML" ],
+		"taxonomy": [ "HTML", "RSS", "JSON" ],
+		"taxonomyTerm": [ "HTML", "RSS", "JSON" ]
+	},
+	"taxonomies": {
+		"category": "categories"
+	},	
+	"rssLimit": 25,
+	"uglyURLs": false,
+	"blackfriday": {
+		"fractions": false
+	},
+	"enableRobotsTXT": true,
+	"languageCode": "[LANGUAGE]",
+	"paginate": 10,
+	"params": {
+		"description": "musings from the nib",
+		"itunes_description": "[ITUNES_DESCRIPTION]",
+		"itunes_category": "[ITUNES_CATEGORY]",
+		"itunes_subcategory": "[ITUNES_SUBCATEGORY]",
+		"itunes_author": "[ITUNES_AUTHOR]",
+		"itunes_email": "[ITUNES_EMAIL]",
+		"itunes_cover": "[ITUNES_COVER]",
+		"twitter_username": "[TWITTER_USERNAME]",
+		"github_username": "[GITHUB_USERNAME]",
+		"instagram_username": "[INSTAGRAM_USERNAME]",
+		"site_id": "[SITE_ID]",
+		"paginate_home": false,
+		"paginate_categories": false,
+		"paginate_replies": false,
+		"theme_seconds": "0",
+		"plugins_css": [],
+		"plugins_js": [],
+		"plugins_html": [],
+		"subtitle": "enter your subtitle here",
+		"mailto": "email@youraddress.com"
+	}
+}

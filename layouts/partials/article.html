@@ -1,0 +1,43 @@
+<article class="h-entry">
+	<div class="article-meta">
+		<span class="pubdate">Published on <time class="dt-published" datetime='{{ .Date.Format "2006-01-02T15:04:05.000-07:00" }}' itemprop="datePublished">{{ .Date.Format "Jan 2, 2006" }}</time>
+		</span>
+		<span class="permalink"><a href="{{ .RelPermalink }}">  [Permalink]</a></span><br />
+		{{ if .Title }}
+			{{ $readTime := .ReadingTime }}
+			<span class="read-time">Reading time: {{ .ReadingTime }} {{ cond (eq $readTime 1) "minute" "minutes"}}</span><br />
+		{{ end }}
+		{{ $Site := .Site }}
+		{{ if .Params.categories }}
+			<span class="catlist">Posted in: </span>
+			<span class="post-categories">
+				<span class="article-category">
+					{{ range $i, $e := .Params.categories }}
+						{{ if gt $i 0 }}
+							<span>•</span>
+						{{ end }}
+						<a class="article-category-link" href="{{ $Site.BaseURL }}/categories/{{ $e | urlize }}">{{ $e }}</a>
+					{{ end }}
+				</span>
+			</span>
+		{{ end }}
+		{{ if .Title }}
+			<header class="article-header">
+				<h1 class="article-title p-name" itemprop="name">{{ .Title }}</h1>
+			</header>
+		{{ end }}
+	</div>
+	<section class="e-content">
+		{{ .Content }}
+	</section>
+	<div class="email-reply">
+{{ if .Title }}
+		<a class="reply" href="mailto:{{ .Site.Params.mailto }}?subject=Reply to {{ .Title }}">Reply by email</a>
+{{ else }}
+<a class="reply" href="mailto:{{ .Site.Params.mailto }}?subject=Reply to {{ .Permalink | safeURL }}">Reply by email</a>
+{{ end }}
+	</div>
+	{{ if .Site.Params.include_conversation }}
+		<script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
+	{{ end }}
+</article>

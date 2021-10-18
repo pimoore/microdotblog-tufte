@@ -1,0 +1,27 @@
+{{ partial "head.html" . }}
+
+<body>
+<div id="container">
+	{{ partial "header.html" . }}
+	<section id="main" class="outer">
+
+		<div class="photos-grid-container" style="display: grid; grid-column-gap: 15px; grid-row-gap: 15px; grid-template-columns: 30% 30% 30%;">
+			{{- $list := where .Pages ".Params.images" "!=" nil -}}
+			{{- $len := (len $list) -}}
+			{{ range $index, $value := $list }}
+				<a href="{{ .Permalink }}">
+					{{ range first 1 .Params.images }}
+						<img src="{{ . }}" width="300" height="300" style="border-radius: 5px; max-width: 100%; height: auto;" class="photos-grid-item" />
+					{{ end }}
+				</a>
+			{{ end }}
+		</div>
+    </section>
+    {{ partial "footer.html" . }}
+</div>
+	{{ partial "custom_footer.html" . }}
+	{{ range .Site.Params.plugins_js }}
+		<script src="{{ . }}"></script>
+	{{ end }}
+</body>
+</html>

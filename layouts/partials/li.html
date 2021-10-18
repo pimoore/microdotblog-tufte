@@ -1,0 +1,25 @@
+<article class="h-entry">
+	{{ if .Title }}
+		<h1>
+			<a class="archive-article-title u-url" href="{{ .RelPermalink }}">{{ .Title }}</a>
+		</h1>
+	{{ end }}
+	{{ if and (.Title) (.Summary) }}
+		<div class="p-summary">
+			<section>
+				<p>{{ .Summary }}</p>
+				{{ if .Truncated }}
+					<p><a href="{{ .Permalink }}">Continue reading →</a></p>
+				{{ end }}
+			</section>
+		</div>
+	{{ else }}
+		<section class="content post e-content">
+			{{ .Content }}
+		</section>
+	{{ end }}
+	<a href="{{ .RelPermalink }}" class="archive-article-date u-url">
+	<time datetime='{{ .Date.Format "2006-01-02T15:04:05.000-07:00" }}' itemprop="datePublished">{{ .Date.Format "Jan 2, 2006" }}</time>
+	</a>
+</article>
+<hr>
