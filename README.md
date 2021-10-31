@@ -144,9 +144,14 @@ Code example:
 <p hidden>slug title here</p>
 {{< epigraph pre="Charles E. Weller" >}}Now is the time for all good men to come to the aid of the party.{{< /epigraph >}}
 ```
-## Changing the "subtitle" and "mailto" parameters in config.json
 	
-_Tufte_ includes a configurable subtitle, as well as a reply via email function where readers can respond to your posts using email if they so choose.  Once you've enabled the theme plugin and enabled it on your account, these parameters can be adjusted in the ```config.json``` template by doing the following:
+## Installing the theme
+	
+Before installing _Tufte_ be sure to remove any custom CSS, other theme plugins, and set your template to blank.  Then save the changes, after which you can install the plugin for this theme.  If things aren't working or displaying properly, you may have to remove **all plugins** first, save the changes and install _Tufte_, then add back the other plugins.  Once the theme is successfully installed, you can configure the description, subtitle, and mailto address as explained below:
+	
+### Changing the "description", "subtitle" and "mailto" parameters in config.json
+	
+_Tufte_ includes a configurable description, subtitle, as well as a reply via email function where readers can respond to your posts using email if they so choose.  Once you've enabled the theme plugin and enabled it on your account, these parameters can be adjusted in the ```config.json``` template by doing the following:
 	
 1. Go to micro.blog on the web
 2. Click Design in the sidebar
@@ -154,7 +159,7 @@ _Tufte_ includes a configurable subtitle, as well as a reply via email function 
 4. Click “Edit Custom Theme” button
 5. Click on the “Tufte” name link in the list
 6. Under Custom Templates, click on config.json
-7. In the edit window on the left, scroll down to the bottom to where you see the “subtitle”: and “mailto”: parameters, and change the value in the second set of quotes (leave the quotes there) to the subtitle and your email address, respectively
+7. In the edit window on the left, scroll down to the [params] section at the bottom to where you see the "description":, “subtitle”: and “mailto”: parameters, and change the value in the second set of quotes (leave the quotes there) to the site description, subtitle and your email address, respectively
 8. At the top of the page, click the “Update Template” button
 9. You may see a spinner for a brief time, then once that stops your template is updated
 10. You may have to reload your blog page in the browser a few times for the changes to populate, especially if your browser has cached any data.
