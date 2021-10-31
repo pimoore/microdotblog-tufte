@@ -84,7 +84,7 @@
 	"languageCode": "[LANGUAGE]",
 	"paginate": 10,
 	"params": {
-		"description": "musings from the nib",
+		"description": "enter your description here",
 		"itunes_description": "[ITUNES_DESCRIPTION]",
 		"itunes_category": "[ITUNES_CATEGORY]",
 		"itunes_subcategory": "[ITUNES_SUBCATEGORY]",
