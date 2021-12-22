@@ -32,9 +32,9 @@
 	</section>
 	<div class="email-reply">
 {{ if .Title }}
-		<a class="reply" href="mailto:{{ .Site.Params.mailto }}?subject=Reply to {{ .Title }}">Reply by email</a>
+		<a class="reply" href="mailto:{{ .Site.Params.mailto }}?subject=Reply%20to%20{{ .Title }}">Reply by email</a>
 {{ else }}
-<a class="reply" href="mailto:{{ .Site.Params.mailto }}?subject=Reply to {{ .Permalink | safeURL }}">Reply by email</a>
+<a class="reply" href="mailto:{{ .Site.Params.mailto }}?subject=Reply%20to%20{{ .Permalink | safeURL }}">Reply by email</a>
 {{ end }}
 	</div>
 	{{ if .Site.Params.include_conversation }}
