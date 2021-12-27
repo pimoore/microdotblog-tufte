@@ -103,6 +103,7 @@
 		"plugins_js": [],
 		"plugins_html": [],
 		"subtitle": "enter your subtitle here",
-		"mailto": "email@youraddress.com"
+		"mailto": "email@youraddress.com",
+		"ogimage": "https://micro.blog/[USERNAME]/avatar.jpg"
 	}
 }
