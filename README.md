@@ -147,7 +147,8 @@ Code example:
 
 ## built-in plugin support
 * support in the layout and styling for the following plugins has been built-in to Hitchens, and will take affect automatically as long as the plugin is installed
-	- Conversation on Micro.blog, by @sod -- shows below the Reply via email link
+	- Reply by Email, by @sod -- shows a customizable link to allow people to reply to your post via email
+	- Conversation on Micro.blog, by @sod -- shows a customizable link to allow people to reply to your post via Micro.blog
 	- Surprise Me!, by @sod -- shows in the main menu
 	- Post Stats, by @amit -- shows in the main menu with a link to its own page
 	
@@ -243,9 +244,9 @@ xhr.onreadystatechange = function(e) {
 	
 Tufte is available as a full plugin on Micro.blog.  Before installing _Tufte_ be sure to remove any custom CSS, other theme plugins, and set your template to blank.  Then save the changes, after which you can install the plugin for this theme.  If things aren't working or displaying properly, you may have to remove **all plugins** first, save the changes and install _Tufte_, then add back the other plugins.  Once the theme is successfully installed, you can configure the subtitle and mailto parameters as explained below:
 	
-### Changing the "subtitle" and "mailto" parameters in config.json
+### Changing the "subtitle" and "description" parameters in config.json
 	
-_Tufte_ includes a configurable subtitle, as well as a reply via email function where readers can respond to your posts using email if they so choose.  Once you've installed the theme plugin on your account per the above instructions, these parameters can be adjusted in the plugin settings.  These new parameter values should be kept anytime the plugin receives an update to its codebase.
+_Tufte_ includes a configurable subtitle, as well as site description.  Once you've installed the theme plugin on your account per the above instructions, these parameters can be adjusted in the plugin settings.  These new parameter values should be kept anytime the plugin receives an update to its codebase.
 	
 ## Screenshots
 

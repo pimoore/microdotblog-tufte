@@ -265,9 +265,7 @@ input.margin-toggle {
 	height: 100%;
 }
 
-a.reply,
-.conversation-on-mb,
-.conversation-on-mb-fallback {
+.email-reply, .conversation-reply {
   	font-size: 1.2rem;
 }
 
