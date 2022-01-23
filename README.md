@@ -144,6 +144,100 @@ Code example:
 <p hidden>slug title here</p>
 {{< epigraph pre="Charles E. Weller" >}}Now is the time for all good men to come to the aid of the party.{{< /epigraph >}}
 ```
+
+## built-in plugin support
+* support in the layout and styling for the following plugins has been built-in to Hitchens, and will take affect automatically as long as the plugin is installed
+	- Conversation on Micro.blog, by @sod -- shows below the Reply via email link
+	- Surprise Me!, by @sod -- shows in the main menu
+	- Post Stats, by @amit -- shows in the main menu with a link to its own page
+	
+## On This Day support
+* based on the plugin by @cleverdevil, with custom code added to work and style properly with Hitchens
+* requires setting up a new custom "On This Day" page and setting it to display in your navigation, then inserting the following code into the page content:
+
+```
+<div id="on-this-day">
+  <div class="center">Loading...</div>
+</div>
+
+<script>
+var container = document.getElementById('on-this-day');
+
+function renderPost(post) {
+    var postEl = document.createElement('article');
+    postEl.className = 'post h-entry';
+    container.appendChild(postEl);
+    
+    if (post['properties']['name'] != null) {
+        var dividedEl = document.createElement('div');
+        dividedEl.className = 'divided';
+        postEl.appendChild(dividedEl);
+        var titleEl = document.createElement('h1');
+        titleEl.className = 'content-title';
+        titleEl.innerText = post['properties']['name'][0];
+        dividedEl.appendChild(titleEl);
+    }
+
+    var contentEl = document.createElement('section');
+    contentEl.className = 'post-content e-content';
+    contentEl.innerHTML = post['properties']['content'][0]['html'];
+    postEl.appendChild(contentEl);
+
+    var postmetaEl = document.createElement('div');
+    postmetaEl.className = 'post-meta';
+    contentEl.appendChild(postmetaEl);    
+
+    var postdateEl = document.createElement('div');
+    postdateEl.className = 'article-post-date';
+    postmetaEl.appendChild(postdateEl);
+
+    var permalinkEl = document.createElement('a');
+    permalinkEl.className = 'permalink u-url';
+    permalinkEl.href = post['properties']['url'][0];
+    postdateEl.appendChild(permalinkEl);
+
+    var publishedEl = document.createElement('time');
+    publishedEl.className = 'dt-published';
+    publishedEl.datetime = post['properties']['published'][0];
+
+    var published = post['properties']['published'][0];
+    published = new Date(published.slice(0,19).replace(' ', 'T'));
+
+    publishedEl.innerText = published.toDateString();
+    permalinkEl.appendChild(publishedEl);
+
+    var ruleEl = document.createElement('hr');
+    container(ruleEl);
+
+}
+
+function renderNoContent() {
+    var noPostsEl = document.createElement('div');
+	noPostsEl.className = 'center';
+    noPostsEl.innerText = 'No posts found for this day. Check back tomorrow!';
+    container.appendChild(noPostsEl);
+}
+
+var xhr = new XMLHttpRequest();
+xhr.responseType = "json";
+xhr.open('GET', "https://micromemories.cleverdevil.io/posts?tz=America/Toronto", true);
+xhr.send();
+
+xhr.onreadystatechange = function(e) {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        container.innerHTML = '';
+        if (xhr.response.length == 0) {
+            renderNoContent();
+        } else {
+            xhr.response.forEach(function(post) {
+                renderPost(post);
+            });
+        }
+    }
+}
+</script>
+```
+* **be sure to change the timezone setting to the correct one for you**
 	
 ## Installing the theme
 	

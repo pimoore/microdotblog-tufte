@@ -102,6 +102,7 @@ h1 {
 	margin-bottom: 1.5rem;
 	font-size: 3.2rem;
 	line-height: 1;
+	width: 55%;
 }
 
 h2 {
@@ -226,7 +227,11 @@ li:not(:first-child) {
 
 img {
 	max-width: 100%;
+	display: flex;
+	height: auto;
+	margin: 2em auto;
 	border-radius: 5px;
+	box-shadow: 0 0 10px 0 darkgray;
 }
 
 /* Newthought element styling
@@ -260,7 +265,9 @@ input.margin-toggle {
 	height: 100%;
 }
 
-a.reply {
+a.reply,
+.conversation-on-mb,
+.conversation-on-mb-fallback {
   	font-size: 1.2rem;
 }
 
@@ -486,6 +493,10 @@ div.table-wrapper {
 	font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif;
 }
 
+table.post-stats-tbl {
+	font-size: 1.3em;
+}
+
 /* Code sections */
 
 code, pre > code {
@@ -687,6 +698,9 @@ img.microblog_avatar {
 
 	img {
 		height: auto;
+	}
+	table.post-stats-tbl {
+		font-size: 1.1em;
 	}
 }
 

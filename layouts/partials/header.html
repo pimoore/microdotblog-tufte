@@ -8,6 +8,9 @@
 				{{ range .Site.Menus.main }}
 					<a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
 				{{ end }}
+				{{ if templates.Exists "partials/surprise-me-head.html" }}
+					<a class="main-nav-link" href="{{ "surprise-me" | absURL }}">Surprise Me!</a>
+				{{ end }}
 				<a class="main-nav-link" href="{{ "feed.xml" | absURL }}">RSS</a>
 			</nav>
 			<nav id="sub-nav">
