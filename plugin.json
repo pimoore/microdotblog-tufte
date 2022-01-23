@@ -12,11 +12,6 @@
 			"field": "params.description",
 			"label": "Description",
 			"placeholder": "Enter your description here"
-		},
-		{
-			"field": "params.mailto",
-			"label": "Reply by Email address",
-			"placeholder": "Enter your email address here"
 		}
 	]
 }
