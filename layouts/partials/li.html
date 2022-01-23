@@ -3,16 +3,17 @@
 		<h1>
 			<a class="archive-article-title u-url" href="{{ .RelPermalink }}">{{ .Title }}</a>
 		</h1>
-	{{ end }}
-	{{ if and (.Title) (.Summary) }}
-		<div class="p-summary">
-			<section>
-				<p>{{ .Summary }}</p>
-				{{ if .Truncated }}
+		{{ if .Summary }}
+			<div class="p-summary">
+				<section>
+					<p>{{ .Summary }}</p>
 					<p><a href="{{ .Permalink }}">Continue reading →</a></p>
-				{{ end }}
-			</section>
-		</div>
+				</section>
+			</div>
+		{{ else if .Truncated }}
+			{{ .Content | truncate 200 }}
+			<p><a href="{{ .Permalink }}">Continue reading →</a></p>
+		{{ end }}
 	{{ else }}
 		<section class="content post e-content">
 			{{ .Content }}
