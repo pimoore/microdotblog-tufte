@@ -559,6 +559,18 @@ pre.poetry > code p {
 	margin-bottom: 0;
 }
 
+/* Bookshelf styling */
+
+p.bookshelf_book {
+	clear: both;
+	margin: 2em auto;
+}
+
+p.bookshelf_book a img {
+	padding-right: 0 !important;
+	margin: auto 1em auto 0;
+} 
+
 /* Microblog conversation styling */
 
 .microblog_conversation {
