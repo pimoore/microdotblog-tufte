@@ -589,6 +589,9 @@ img.microblog_avatar {
 	border-radius: 10px !important;
 	vertical-align: top;
 	box-shadow: 0 0 10px 0 darkgray;
+	display: flex;
+	float: left;
+	margin: 0;
 }
 
 .microblog_fullname {
@@ -599,8 +602,10 @@ img.microblog_avatar {
 
 .microblog_time {
 	font-size: 13px;
-	padding-top: 10px;
+	/*padding-top: 10px;*/
 	color: gray;
+	margin-top: 2em;
+	text-align: right;
 }
 
 .microblog_time a {
@@ -699,9 +704,6 @@ img.microblog_avatar {
 	img {
 		height: auto;
 	}
-	table.post-stats-tbl {
-		font-size: 1.1em;
-	}
 }
 
 @media screen and (max-width: 800px) { 
@@ -717,4 +719,38 @@ img.microblog_avatar {
 	pre.poetry, pre.poetry > code {
 		width: 100% !important;
 	}
+	.microblog_user {
+	float: left;
+	width: 100%;
+	align-items: center;
+	margin-bottom: 1em;
+	} 
+	.microblog_fullname {
+	display: flex;
+	position: relative;
+	align-items: center;
+	padding-left: 1em;
+	padding-top: 1em;
+	} 
+}
+
+@media screen and (min-width: 768px) {
+	.microblog_user {
+	float: left;
+	width: 25%;
+	display: flex;
+	padding-right: 1em;
+	} 
+	.microblog_text {
+		display: flex;
 	}
+	.microblog_text p {
+	margin: 0px 0px 1em;
+	} 
+	.microblog_fullname {
+	padding-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0 !important;
+	} 
+}
