@@ -252,7 +252,7 @@ _Tufte_ includes a configurable subtitle, as well as site description.  Once you
 
 ### Index
 
-![Index top](images/index-top.jpeg)
+![Index top](images/screenshot.png)
 ![Index bottom](images/index-bottom.jpeg)
 
 ### Post Page
