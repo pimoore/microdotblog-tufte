@@ -563,12 +563,14 @@ pre.poetry > code p {
 
 p.bookshelf_book {
 	clear: both;
-	margin: 2em auto;
+	margin: 2em 0;
 }
 
 p.bookshelf_book a img {
+	margin: 1em 1em 1em 0;
+	position: relative;
+	top: -15px;
 	padding-right: 0 !important;
-	margin: auto 1em auto 0;
 } 
 
 /* Microblog conversation styling */
