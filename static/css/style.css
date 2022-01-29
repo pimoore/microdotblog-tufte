@@ -62,11 +62,6 @@ body {
 	margin-bottom: 1.2rem;
 	margin-top: 3rem;
 }
-
-/* Site subtitle 
-	- entry can be changed in the config.json file
-	- config.json file also has a "description" field which
-	  will display in cross-posts to Mastodon */
 	
 p.subtitle {
 	font-style: italic;
@@ -96,6 +91,12 @@ nav#page-nav a, span {
 
 span.prev {
 	margin-right: 1rem;
+}
+
+/* search styling */
+
+#list_results {
+	max-width: 87.5%;
 }
 
 /* Heading and horizontal rule styles
@@ -793,5 +794,8 @@ img.microblog_avatar {
 	}
 	pre.poetry, pre.poetry > code {
 		width: 100% !important;
+	}
+	#list_results {
+		max-width: 100%;
 	}
 }
