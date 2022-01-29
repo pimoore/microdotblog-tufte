@@ -2,7 +2,7 @@
 <body>
 	<div class="content list h-feed">
 		{{ partial "header.html" . }}
-		{{ $paginator := .Paginate (where .Pages "Type" "post") }}
+		{{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
 		{{ range $paginator.Pages }}
 			{{ partial "li.html" . }}
 		{{ end }}

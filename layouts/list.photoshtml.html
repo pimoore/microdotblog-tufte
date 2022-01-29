@@ -6,7 +6,7 @@
 	<section id="main" class="outer">
 
 		<div class="photos-grid-container" style="display: grid; grid-column-gap: 15px; grid-row-gap: 15px; grid-template-columns: 30% 30% 30%;">
-			{{- $list := where .Pages ".Params.images" "!=" nil -}}
+			{{- $list := where .Site.Pages ".Params.images" "!=" nil -}}
 			{{- $len := (len $list) -}}
 			{{ range $index, $value := $list }}
 				<a href="{{ .Permalink }}">
