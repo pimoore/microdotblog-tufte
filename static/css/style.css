@@ -82,6 +82,7 @@ p.subtitle {
 
 #main-nav {
 	max-width: 87.5%;
+	margin-top: 2em;
 }
 
 #main-nav a.main-nav-link {
@@ -378,7 +379,7 @@ a:link::-moz-selection {
 		color: #D8DEE9;
 	}
   	p.subtitle {
-      	color: #D8DEE9;
+      	color: #5E81AC;
   	}
 	.microblog_post {
       	background: #D8DEE9 !important;
@@ -645,7 +646,6 @@ p.bookshelf_book a img {
 
 .microblog_user {
 	display: inline-block;
-	padding-bottom: 1em;
 } 
 
 img.microblog_avatar {
@@ -663,6 +663,8 @@ img.microblog_avatar {
 
 .microblog_fullname {
 	padding-left: 1em;
+	display: inline-block;
+	margin-top: 16px;
 }
 
 .microblog_text {
