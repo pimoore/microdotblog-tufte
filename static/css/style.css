@@ -240,6 +240,12 @@ img {
 	box-shadow: 0 0 10px 0 darkgray;
 }
 
+video, audio {
+	display: flex;
+	height: auto;
+	max-width: 55%;
+} 
+
 .content.page img {
 	max-width: 55%;
 }
@@ -798,4 +804,9 @@ img.microblog_avatar {
 	#list_results {
 		max-width: 100%;
 	}
+	video, audio {
+	display: flex;
+	height: auto;
+	max-width: 100%;
+	} 
 }
