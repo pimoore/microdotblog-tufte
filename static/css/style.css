@@ -523,8 +523,8 @@ table.post-stats-tbl {
 	color: #111;
 }
 
-table.post-stats-tbl:first-of-type {
-	margin-top: 3em;
+table.post-stats-tbl {
+	margin-bottom: 3em;
 }
 
 table.post-stats-tbl:last-of-type {
