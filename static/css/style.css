@@ -185,6 +185,16 @@ article {
 	padding-bottom: 1rem;
 }
 
+.archive_categories {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 2em;
+}
+
+.archive_categories a {
+	margin: 0 1em 0 0;
+}
+
 .layout-title span {
 	display: block;
 	font-size: 1.5rem;
