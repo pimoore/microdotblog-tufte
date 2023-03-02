@@ -256,9 +256,6 @@ video, audio {
 	max-width: 55%;
 } 
 
-.content.page img {
-	max-width: 55%;
-}
 
 /* Newthought element styling
 	- shortcode to start highlight the first few words of a new section or thought */
