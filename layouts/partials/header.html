@@ -1,10 +1,10 @@
 <header id="header">
 	<div id="header-outer" class="outer">
 		<div id="header-inner" class="inner">
-			<a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+			<a id="main-nav-toggle" class="nav-icon" href="javascript:;" aria-label="Toggle main nav"></a>
 			<a id="logo" class="logo-text" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 			<p class="subtitle">{{ .Site.Params.subtitle }}</p>
-			<nav id="main-nav">
+			<nav id="main-nav" aria-label="Navigation menu">
 				{{ range .Site.Menus.main }}
 					<a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
 				{{ end }}
@@ -13,7 +13,7 @@
 				{{ end }}
 				<a class="main-nav-link" href="{{ "feed.xml" | absURL }}">RSS</a>
 			</nav>
-			<nav id="sub-nav">
+			<nav id="sub-nav" aria-label="Search form">
 				<div id="search-form-wrap">
 				</div>
 			</nav>

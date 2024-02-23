@@ -1,5 +1,5 @@
 {{ $pag := $.Paginator }}
-<nav id="page-nav">
+<nav id="page-nav" aria-label="Page navigator">
 	{{ if $pag.HasPrev }}
 		<span class="prev">
 			<a href="{{ $pag.Prev.URL }}">

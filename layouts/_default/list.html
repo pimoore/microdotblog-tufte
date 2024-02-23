@@ -6,11 +6,13 @@
 			<div class="archive-category-wrap">
 				<span class="archive-category">Posts in: {{ .Title }}</span>
 			</div>
-			<div class="archives">
-				{{ range .Paginator.Pages }}
-					{{ partial "li.html" . }}
-				{{ end }}
-			</div>
+			<main>
+				<div class="archives">
+					{{ range .Paginator.Pages }}
+						{{ partial "li.html" . }}
+					{{ end }}
+				</div>
+			</main>
 		</section>
 		{{ partial "pagination.html" . }}
 	</section>

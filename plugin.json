@@ -12,6 +12,11 @@
 			"field": "params.description",
 			"label": "Description",
 			"placeholder": "Enter your description here"
+		},
+		{
+			"field": "languageCode",
+			"label": "Language",
+			"placeholder": "Enter the language code (ISO 639-1) for your content to improve accessibility"
 		}
 	]
 }

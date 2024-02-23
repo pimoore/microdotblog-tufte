@@ -3,26 +3,28 @@
 <body>
   <h1 class="page-title">{{ .Title }}</h1>
 	<div id="container" class="h-feed">
-		<section id="main" class="outer">
-			<div class="archive_categories">
-				{{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
-					<p><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}"> {{ $name }}</a></p>
-				{{ end }}
-			</div>
-			<hr>
-			<br><br>
-			{{ $list := (where .Site.Pages "Type" "post") }}
-			{{ range $list }}
-				<p class="h-entry" style="padding-bottom: 5px;">
-					<a href="{{ .Permalink }}" class="u-url"><span class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "2006-01-02" }}</span></a>
-					{{ if .Title }}
-						<span class="p-name"><b>{{ .Title }}</b></span> 
-					{{ else }}
-						<span class="truncated">{{ .Summary | truncate 100 }}</span>
+		<main>
+			<section id="main" class="outer">
+				<div class="archive_categories">
+					{{ range $name, $taxonomy := $.Site.Taxonomies.categories }}
+						<p><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}"> {{ $name }}</a></p>
 					{{ end }}
-				</p>
-			{{ end }}
-		</section>
+				</div>
+				<hr>
+				<br><br>
+				{{ $list := (where .Site.Pages "Type" "post") }}
+				{{ range $list }}
+					<p class="h-entry" style="padding-bottom: 5px;">
+						<a href="{{ .Permalink }}" class="u-url"><span class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "2006-01-02" }}</span></a>
+						{{ if .Title }}
+							<span class="p-name"><b>{{ .Title }}</b></span> 
+						{{ else }}
+							<span class="truncated">{{ .Summary | truncate 100 }}</span>
+						{{ end }}
+					</p>
+				{{ end }}
+			</section>
+		</main>
 		{{ partial "footer.html" . }}
 	</div>
 	{{ partial "custom_footer.html" . }}
